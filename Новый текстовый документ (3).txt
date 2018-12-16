@@ -1,0 +1,45 @@
+#include "pch.h"
+#include <windows.h>
+#include <iostream>
+#include <iomanip>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int souz[10][10];
+	int n, m, i, j, ss, z = 0,  p= 0;
+	cout << "Введіть кількість рядків:  ";
+	cin >> n;
+	cout << "Введіть кількість стовпчиків:  ";
+	cin >> m;
+	cout << endl;
+	srand(time(NULL));
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			souz[i][j] = rand() % 101 - 50;
+			cout << setw(4) << setprecision(4) << souz[i][j];
+		}
+		cout << endl;
+	}
+	for (i = 0; i < n; i++) {
+		ss = 0;
+		for (j = 0; j < m; j++)
+			if (souz[i][j] < 0)
+			{
+				ss++;
+			}
+		if (ss > z)
+		{
+			z = ss;
+			p = i;
+		}
+	}
+	cout << endl << "Номер рядка = " << p + 1 << endl;
+	system("pause");
+	return 0;
