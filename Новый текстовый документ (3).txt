@@ -10,11 +10,11 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	int souz[10][10];
+	int commit[10][10];
 	int n, m, i, j, ss, z = 0,  p= 0;
-	cout << "Ââåä³òü ê³ëüê³ñòü ðÿäê³â:  ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼ ÃªÂ³Ã«Ã¼ÃªÂ³Ã±Ã²Ã¼ Ã°Ã¿Ã¤ÃªÂ³Ã¢:  ";
 	cin >> n;
-	cout << "Ââåä³òü ê³ëüê³ñòü ñòîâï÷èê³â:  ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼ ÃªÂ³Ã«Ã¼ÃªÂ³Ã±Ã²Ã¼ Ã±Ã²Ã®Ã¢Ã¯Ã·Ã¨ÃªÂ³Ã¢:  ";
 	cin >> m;
 	cout << endl;
 	srand(time(NULL));
@@ -22,7 +22,7 @@ int main()
 	{
 		for (j = 0; j < m; j++)
 		{
-			souz[i][j] = rand() % 101 - 50;
+			commit[i][j] = rand() % 101 - 50;
 			cout << setw(4) << setprecision(4) << souz[i][j];
 		}
 		cout << endl;
@@ -40,6 +40,6 @@ int main()
 			p = i;
 		}
 	}
-	cout << endl << "Íîìåð ðÿäêà = " << p + 1 << endl;
+	cout << endl << "ÃÃ®Ã¬Ã¥Ã° Ã°Ã¿Ã¤ÃªÃ  = " << p + 1 << endl;
 	system("pause");
 	return 0;
